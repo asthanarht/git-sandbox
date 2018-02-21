@@ -1,0 +1,39 @@
+
+1. List out the key difference between a centralized version control system and distributed version control system
+        Centralized Version Control -
+        a) Center repo for codebase
+        b) revision history is maintained in server
+        c) Each developer can create branch 
+        d) “Committing” a change simply means recording the change in the central system.
+        e)Pull down any changes other people have made from the central server.
+        f) Make your changes, and make sure they work properly.
+        g) Commit your changes to the central server, so other programmers can see them.
+
+        Distrbuted version control
+        a) Performing actions other than pushing and pulling changesets is extremely fast because the tool only needs to access the hard drive, not a remote server.
+        b) Committing new changesets can be done locally without anyone else seeing them. Once you have a group of changesets ready, you can push all of them at once.
+        c) Since each programmer has a full copy of the project repository, they can share changes with one or two other people at a time if they want to get some feedback before showing the changes to everyone.
+
+
+2. List down any two centralized version control system and 2 distributed version control system
+
+        CVS 
+        a) SVN, TFS,SVN, Perforce
+
+        DVS
+        a) GIT,Mercurial
+
+
+3. What are the advantages of git VCS over other VCS
+
+       a) The notion of uniquely recognizable commits makes sending patches between peers painless. I.e. you make the patch as a commit, and share it with others developers who need it. Later when everyone wants to merge together, that particular commit is recognized and can be compared between branches, having less chance of merge conflict. Developers tend to send patches to each other by USB stick or e-mail regardless of versioning tool you use. Unfortunately in the CVCS case, version control will register the commits as seperate, failing to recognize that the changes are the same, leading to a higher chance of merge conflict.
+        b) You can have local experimental branches (cloned repositories can also be considered a branch) that you don't need to show to others. That means, breaking changes don't need to affect developers if you haven't pushed anything upstream. In a CVCS, when you still have a breaking change, you may have to work offline until you've fixed it and commit the changes by then. This approach effectively defeats the purpose of using versioning as a safety net but it is a necessary evil in CVCS.
+        c) In today's world, companies usually work with off-shore developers (or if even better they want to work from home). Having a DVCS helps these kind of projects out because it eliminates the need of a reliable network connection since everyone has their own repo.
+
+
+4. What are the different states of a file in the Git VCS
+  a) commited
+  b) modified
+  c) staged
+
+
